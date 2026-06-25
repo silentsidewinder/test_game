@@ -25,3 +25,15 @@ Packs by sutemo
 Packs by Noraneko Games
 
 [https://noranekogames.itch.io/yumebackground](https://noranekogames.itch.io/yumebackground)
+
+## Music
+
+Pack by Potat0Master
+
+[https://potat0master.itch.io/free-background-music-for-visual-novels-bgm-pack-1](https://potat0master.itch.io/free-background-music-for-visual-novels-bgm-pack-1)
+
+## Voice
+
+Pack by Dillon Becker
+
+[https://dillonbecker.itch.io/sdap](https://dillonbecker.itch.io/sdap)

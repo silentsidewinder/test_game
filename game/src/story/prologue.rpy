@@ -6,9 +6,15 @@ label prologue:
 
     scene bg sitting room
 
+    # Start playing the music
+    play music hope
+
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
+
+    # Voice
+    voice "audio/voice/greeting.ogg"
 
     show eileen happy
 
@@ -17,6 +23,9 @@ label prologue:
     e "You've created a new Ren'Py game."
 
     e "Once you add a story, pictures, and music, you can release it to the world!"
+
+    # Stop the music with a 2-seconds fadeout
+    stop music fadeout 2.0
 
     show eileen surprised
 
