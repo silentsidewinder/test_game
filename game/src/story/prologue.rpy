@@ -20,13 +20,23 @@ label prologue:
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    c_eileen "You've created a new Ren'Py game."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    c_eileen "This step is to show you  the branching dialogue options"
+
+    c_eileen "Choose how to respond"
+
+    menu:
+        "Rude":
+            show eileen angry
+
+            c_eileen "F U."
+
+        "Kind":
+            show eileen surprised
+
+            c_eileen "I didn't expect that."
+
 
     # Stop the music with a 2-seconds fadeout
     stop music fadeout 2.0
-
-    show eileen surprised
-
-    e ":o"
