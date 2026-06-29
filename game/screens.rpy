@@ -311,6 +311,10 @@ screen navigation():
 
         textbutton _("Preferences") action ShowMenu("preferences")
 
+        textbutton _("Pop-up menu") action Show("lore_text_screen_pop_up")
+
+        textbutton _("Show menu") action Show("lore_text_screen_menu")
+
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
@@ -1619,3 +1623,43 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+################################################################################
+## Custom screens
+################################################################################
+screen lore_text_screen_pop_up():
+    # This ensures clicking outside or hitting 'Escape' closes the text
+    modal True 
+
+    # A dark background tint to make the text pop
+    add "#000000aa" 
+
+    frame:
+        xalign 0.5
+        yalign 0.5
+        padding (40, 40)
+        has vbox
+        spacing 20
+
+        text "Adding a new item in the main screen as a pop-up." xalign 0.5
+
+        # A button to close the text window and return to the menu
+        textbutton "Close" action Hide("lore_text_screen_pop_up") xalign 0.5
+
+screen lore_text_screen_menu():
+
+    # This tells Ren'Py to style this like the rest of your game menus
+    tag menu
+
+    use game_menu(_("Show Menu"), scroll="viewport"):
+
+        # Everything inside here is your actual content page
+        vbox:
+            spacing 20
+            xfill True
+            xalign 0.5
+
+            # Add the visual of a generic logo
+            add "generic_logo.png" xalign 0.5
+
+            text _("This menu screen shows a generic logo. It works as a new screen where we can add whatever we want.")
